@@ -1,0 +1,2 @@
+const header=document.querySelector(".header"),toggle=document.querySelector(".toggle"),menuToUp=()=>anime({targets:".toggle-menu",translateY:-500}),menuToDown=()=>anime({targets:".toggle-menu",translateY:0});toggle.addEventListener("click",(()=>{header.classList.contains("open")?(header.classList.remove("open"),anime({targets:".toggle-menu",translateY:-500})):(header.classList.add("open"),anime({targets:".toggle-menu",translateY:0}))}));
+//# sourceMappingURL=script.js.map

@@ -1,0 +1,78 @@
+@import "mixins";
+@import "varibles";
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// ScrollHide
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: $font-medium ;
+  color: $gray;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:visited, a:hover {
+
+  text-decoration: none;
+}
+
+// Text
+h1, h2, h3 {
+
+}
+
+
+//Spacing
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+
+}
+
+//FlexContainer
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+}
+
+
+//Visibility
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
