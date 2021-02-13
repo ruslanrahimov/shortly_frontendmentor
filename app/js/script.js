@@ -15,15 +15,13 @@ const menuToDown = () => {  // menu to down animation by anime.js lib
     });
 }
 
-
 toggle.addEventListener('click', () => { //burger menu
+    header.classList.toggle('open')
 
     if (header.classList.contains('open')) {
-        header.classList.remove('open')
-        menuToUp()
-    } else {
-        header.classList.add('open')
         menuToDown()
+    } else {
+        menuToUp()
     }
 });
 

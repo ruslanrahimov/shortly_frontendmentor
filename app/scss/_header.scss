@@ -27,10 +27,6 @@
       }
     }
 
-    .toggle-menu-vis{
-      display: none;
-    }
-
   }
 
   &__logo{
@@ -110,6 +106,7 @@
     left: 0;
     right: 0;
     transform: translateY(-500px);
+    z-index: 1;
 
 
 

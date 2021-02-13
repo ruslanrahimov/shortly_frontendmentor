@@ -1,0 +1,44 @@
+@import "varibles";
+@import "mixins";
+
+.hero {
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+
+    @include breakpoint-up(large){
+      grid-template-columns: 1fr 1fr;
+    }
+
+    
+  }
+
+  &__text {
+    grid-area: 2;
+    padding: 2.75rem 1.875rem;
+    text-align: center;
+    h1{
+      font-size: 1.875rem;
+      color: $veryDarkViolet;
+      font-weight: 700;
+      margin-top: 1.2rem;
+    }
+
+    p{
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      margin-top: 1.2rem;
+    }
+
+    button{
+      margin-top: 1.8rem;
+    }
+  }
+
+  &__img {
+    grid-area: 1;
+    
+  }
+}
