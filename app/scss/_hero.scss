@@ -30,6 +30,11 @@
     button {
       margin-top: 1.8rem;
       padding: 1rem 2rem;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: $cyanLight;
+      }
     }
   }
 
@@ -42,7 +47,6 @@
     background-position: -15% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    
 
     @include breakpoint-up(small) {
       height: 28rem;
@@ -109,6 +113,11 @@
         font-size: 1rem;
         font-weight: 700;
         cursor: pointer;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+          background: $cyanLight;
+        }
       }
     }
   }
@@ -140,21 +149,21 @@
     @include breakpoint-up(large) {
       // > 1024px
 
-      &__main{
+      &__main {
         padding-top: 3.125rem;
         margin-bottom: 4rem;
       }
-      &__text{
+      &__text {
         padding-left: 0;
         padding-right: 50px;
 
-        h1{
+        h1 {
           font-size: 3.5rem;
           line-height: 4rem;
         }
       }
 
-      &__img{
+      &__img {
         position: absolute;
         top: 0;
         right: 0;
@@ -185,7 +194,7 @@
             border-radius: 8px;
           }
 
-          .submit-btn{
+          .submit-btn {
             padding: 1.1rem 2rem;
             width: 15%;
             border-radius: 8px;
