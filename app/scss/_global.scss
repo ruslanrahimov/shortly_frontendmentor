@@ -90,7 +90,7 @@ button{
 }
 
 .hide-for-desktop {
-  @include breakpoint-up(medium) {
+  @include breakpoint-up(small) {
     display: none;
   }
 }

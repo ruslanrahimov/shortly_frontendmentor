@@ -2,13 +2,10 @@
 @import "mixins";
 
 .hero {
+  position: relative;
   &__main {
     display: grid;
     grid-template-columns: 1fr;
-
-    @include breakpoint-up(large) {
-      grid-template-columns: 1fr 1fr;
-    }
   }
 
   &__text {
@@ -32,6 +29,7 @@
 
     button {
       margin-top: 1.8rem;
+      padding: 1rem 2rem;
     }
   }
 
@@ -44,7 +42,15 @@
     background-position: -15% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    
+
+    @include breakpoint-up(small) {
+      height: 28rem;
+      background-position: -100% 50%;
+    }
   }
+
+  // FORM FOR LINKS
 
   .form-container {
     display: flex;
@@ -64,9 +70,8 @@
       background: $darkViolet;
       margin: 0 auto;
       border-radius: 10px;
-      
 
-      &::before{
+      &::before {
         content: "";
         position: absolute;
         background-image: url("../../images/bg-shorten-mobile.svg");
@@ -76,7 +81,6 @@
         top: 0;
         right: 0;
         border-top-right-radius: 10px;
-        
       }
 
       .link-input {
@@ -90,6 +94,7 @@
         padding-left: 1rem;
         font-size: 1rem;
         font-weight: 500;
+        color: $veryDarkBlue;
       }
 
       .submit-btn {
@@ -98,12 +103,94 @@
         color: #fff;
         background: $cyan;
         width: 90%;
-        height: 3rem;
+        padding: 1rem 0;
         border-radius: 5px;
         border: none;
         font-size: 1rem;
         font-weight: 700;
         cursor: pointer;
+      }
+    }
+  }
+
+  //Responsive
+
+  @include breakpoint-up(medium) {
+    // > 768px
+
+    &__main {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__img {
+      height: 20rem;
+      background-position: -10% 50%;
+    }
+    &__text {
+      grid-area: 1;
+      text-align: start;
+      padding-left: 1rem;
+
+      h1 {
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      // > 1024px
+
+      &__main{
+        padding-top: 3.125rem;
+        margin-bottom: 4rem;
+      }
+      &__text{
+        padding-left: 0;
+        padding-right: 50px;
+
+        h1{
+          font-size: 3.5rem;
+          line-height: 4rem;
+        }
+      }
+
+      &__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 28.125rem;
+      }
+      .form-container {
+        .hero__form {
+          flex-direction: row;
+          width: 100%;
+
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../../images/bg-shorten-desktop.svg");
+            background-size: cover;
+            height: 10rem;
+            width: 100%;
+            border-radius: 10px;
+          }
+
+          .link-input {
+            margin-bottom: 0;
+            height: 3.375rem;
+            width: 70%;
+            margin-right: 1.5rem;
+            border-radius: 8px;
+          }
+
+          .submit-btn{
+            padding: 1.1rem 2rem;
+            width: 15%;
+            border-radius: 8px;
+          }
+        }
       }
     }
   }

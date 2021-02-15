@@ -4,7 +4,7 @@ const toggle = document.querySelector('.toggle');
 const menuToUp = () => { // menu to up animation by anime.js lib
     return anime({
         targets: '.toggle-menu',
-        translateY: -500
+        translateY: -600
     });
 }
 
