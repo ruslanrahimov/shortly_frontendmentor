@@ -8,6 +8,10 @@
 
   &__container {
     text-align: center;
+    padding-bottom: 6rem;
+  }
+
+  &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -49,87 +53,137 @@
     line-height: 1.6;
   }
 
-  .card-1 {//icon for card 1
+  .card-1 {
+    //icon for card 1
     position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: -2.25rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $darkViolet;
-        background-image: url("../../images/icon-brand-recognition.svg");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        width: 5.5rem;
-        height: 5.5rem;
-        border-radius: 50%;
-
+    &::after {
+      content: "";
+      position: absolute;
+      top: -2.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $darkViolet;
+      background-image: url("../../images/icon-brand-recognition.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: .5rem;
-        height: 5.5rem;
-        background: $cyan;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -5.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.5rem;
+      height: 5.5rem;
+      background: $cyan;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -5.5rem;
     }
   }
 
-  .card-2 { //icon for card 2
+  .card-2 {
+    //icon for card 2
     position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: -2.25rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $darkViolet;
-        background-image: url("../../images/icon-detailed-records.svg");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        width: 5.5rem;
-        height: 5.5rem;
-        border-radius: 50%;
-
+    &::after {
+      content: "";
+      position: absolute;
+      top: -2.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $darkViolet;
+      background-image: url("../../images/icon-detailed-records.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: .5rem;
-        height: 5.5rem;
-        background: $cyan;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -5.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.5rem;
+      height: 5.5rem;
+      background: $cyan;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -5.5rem;
     }
   }
 
-  .card-3 { //icon for card 3
+  .card-3 {
+    //icon for card 3
     position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: -2.25rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $darkViolet;
-        background-image: url("../../images/icon-fully-customizable.svg");
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        width: 5.5rem;
-        height: 5.5rem;
-        border-radius: 50%;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -2.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $darkViolet;
+      background-image: url("../../images/icon-fully-customizable.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
+    }
+  }
 
+  @include breakpoint-up(large) {
+
+    &__container{
+        padding-bottom: 6rem;
+    }
+    &__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__card {
+      width: 21.875rem;
+      text-align: start;
+    }
+    
+    &__text{
+        margin-bottom: 4rem;
+        padding-left: 22rem;
+        padding-right: 22rem;
+    }
+    .card-1 {
+        
+      &::after {
+        left: 25%;
+      }
+
+      &::before{
+          transform: rotate(90deg);
+          left: 105%;
+          top: 45%;
+          height: 2.5rem;
+      }
+      margin-top: -5rem;
     }
 
-   
+    .card-2 {
+      &::after {
+        left: 25%;
+      }
+      &::before{
+        transform: rotate(90deg);
+        left: 105%;
+        top: 30%;
+        height: 2.5rem;
+    }
+      margin-top: -2.5rem;
+    }
+    .card-3 {
+      &::after {
+        left: 25%;
+      }
+    }
   }
 }
