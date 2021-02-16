@@ -6,58 +6,68 @@ html {
   font-size: 100%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
-  
 }
 
 // ScrollHide
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: $font-medium ;
+  font-size: $font-medium;
   color: $gray;
-  
 }
 
 ul {
   list-style: none;
 }
 
-a, a:visited, a:hover {
-
+a,
+a:visited,
+a:hover {
   text-decoration: none;
 }
 
 // Text
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
-p{
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
   margin: 0;
   font-weight: 500;
 }
 
-button{
-  color:#fff;
+button {
+  color: #fff;
   background-color: $cyan;
-  padding: 1.25rem 2.5rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 50px;
-  font-size: $font-medium;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-}
+  transition: background 0.3s ease-in-out;
 
+      &:hover {
+        background: $cyanLight;
+      }
+}
 
 //Spacing
 
 .container {
   max-width: 69.375rem;
   margin: 0 auto;
-
 }
 
 //FlexContainer
@@ -76,9 +86,7 @@ button{
   &-ai-c {
     align-items: center;
   }
-
 }
-
 
 //Visibility
 
@@ -86,7 +94,6 @@ button{
   @include breakpoint-down(small) {
     display: none;
   }
-
 }
 
 .hide-for-desktop {
