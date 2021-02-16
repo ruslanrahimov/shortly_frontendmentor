@@ -136,9 +136,8 @@
   }
 
   @include breakpoint-up(large) {
-
-    &__container{
-        padding-bottom: 6rem;
+    &__container {
+      padding-bottom: 6rem;
     }
     &__wrapper {
       grid-template-columns: repeat(3, 1fr);
@@ -147,23 +146,26 @@
       width: 21.875rem;
       text-align: start;
     }
-    
-    &__text{
-        margin-bottom: 4rem;
-        padding-left: 22rem;
-        padding-right: 22rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__text {
+      margin-bottom: 4rem;
+      padding-left: 22rem;
+      padding-right: 22rem;
     }
     .card-1 {
-        
       &::after {
         left: 25%;
       }
 
-      &::before{
-          transform: rotate(90deg);
-          left: 105%;
-          top: 45%;
-          height: 2.5rem;
+      &::before {
+        transform: rotate(90deg);
+        left: 105%;
+        top: 45%;
+        height: 2.5rem;
       }
       margin-top: -5rem;
     }
@@ -172,12 +174,12 @@
       &::after {
         left: 25%;
       }
-      &::before{
+      &::before {
         transform: rotate(90deg);
         left: 105%;
         top: 30%;
         height: 2.5rem;
-    }
+      }
       margin-top: -2.5rem;
     }
     .card-3 {
