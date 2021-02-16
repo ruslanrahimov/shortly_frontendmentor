@@ -23,6 +23,7 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 a,
@@ -34,7 +35,8 @@ a:hover {
 // Text
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
 }
 
