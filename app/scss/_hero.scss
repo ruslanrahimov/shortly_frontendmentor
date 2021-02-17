@@ -39,7 +39,7 @@
     position: relative;
     min-height: 19.8rem;
     max-width: 100%;
-    background-image: url("../../images/illustration-working.svg");
+    background-image: url(".././images/illustration-working.svg");
     background-position: -15% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -74,7 +74,7 @@
       &::before {
         content: "";
         position: absolute;
-        background-image: url("../../images/bg-shorten-mobile.svg");
+        background-image: url(".././images/bg-shorten-mobile.svg");
         background-size: cover;
         height: 8rem;
         width: 69%;
@@ -171,7 +171,7 @@
           &::before {
             content: "";
             position: absolute;
-            background-image: url("../../images/bg-shorten-desktop.svg");
+            background-image: url(".././images/bg-shorten-desktop.svg");
             background-size: cover;
             height: 10rem;
             width: 100%;

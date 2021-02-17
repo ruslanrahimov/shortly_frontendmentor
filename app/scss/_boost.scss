@@ -15,7 +15,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-image: url("../../images/bg-boost-mobile.svg");
+            background-image: url(".././images/bg-boost-mobile.svg");
             background-size: cover;
             background-position: 50% 50%;
             
@@ -39,7 +39,7 @@
         &__container{
            
             &::before{
-                background-image: url("../../images/bg-boost-desktop.svg"); 
+                background-image: url(".././images/bg-boost-desktop.svg"); 
             }
         }
         &__title{
